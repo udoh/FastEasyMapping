@@ -13,13 +13,6 @@
 #import "FEMCache.h"
 #import "FEMAssignmentPolicyMetadata.h"
 
-//  This method is called once the relationships have been populated. This can be used to update attributes on the parent entity
-//  that depend on related records in a to-many relationship.
-@protocol FEMManagedObjectSerializerUpdateRelationships <NSObject>
-@optional
-- (void)didUpdateRelationships;
-@end
-
 
 @implementation FEMManagedObjectDeserializer
 

@@ -2,6 +2,15 @@
 
 #import <Foundation/Foundation.h>
 
+/** This method in this protocol is called once the relationships have been populated. This can be used to update attributes on the parent entity 
+    that depend on related records in a to-many relationship.
+ */
+@protocol FEMManagedObjectSerializerUpdateRelationships <NSObject>
+@optional
+- (void)didUpdateRelationships;
+@end
+
+
 @class FEMManagedObjectMapping, NSManagedObject, NSFetchRequest, NSManagedObjectContext;
 
 @interface FEMManagedObjectDeserializer : NSObject
