@@ -67,7 +67,7 @@
 
         FEMManagedObjectMapping *objectMapping = (FEMManagedObjectMapping *)relationshipMapping.objectMapping;
         NSAssert(
-            [objectMapping isKindOfClass:FEMManagedObjectMapping.class],
+            [NSStringFromClass([objectMapping class]) isEqualToString:@"FEMManagedObjectMapping"],
             @"%@ expect %@ for %@.objectMapping",
             NSStringFromClass(self),
             NSStringFromClass(FEMManagedObjectMapping.class),
